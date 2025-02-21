@@ -1,0 +1,15 @@
+<div id = "container-card-menu">
+  <div class="card-menu">
+    <div class="img-menu">
+      <img [src]="menu.image" />
+    </div>
+    <div class="card-info">
+      <p class="title-menu">{{ menu.name }}</p>
+      <p class="title-price">Giá bán: <b class="price">{{ menu.price }}đ</b> <del class="old-price">{{menu.oldPrice}}đ</del> </p>
+      <div class="button-view-all">
+        <button [routerLink]="['/menu-view-detail', menu.id]" class="button-view"><b>XEM CHI TIẾT</b></button>
+      </div>
+
+    </div>
+  </div>
+</div>

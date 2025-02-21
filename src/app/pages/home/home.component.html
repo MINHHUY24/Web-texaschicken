@@ -1,0 +1,32 @@
+<div id ="top">
+  <app-header></app-header>
+</div>
+
+
+<img class="img-home" src="https://texaschickenvn.com/vnt_upload/weblink/Mobile_banner_1.jpg">
+
+<div class="main">
+  <b class="title-home" > HÔM NAY ĂN GÌ?</b>
+
+  <div class="retangle-home">
+    <div class = "product">
+      @for (item of menu; track $index) {
+        <app-card-menu [menu]="item">
+        </app-card-menu>
+      }
+    </div>
+  </div>
+<div class="find">
+  <img class="img-home1" src="https://texaschickenvn.com/vnt_upload/weblink/Hinh_anh_trang_chu.jpg">
+  <div class="retangle-find">
+    <p class="title-find" > TÌM NHÀ HÀNG GẦN BẠN</p>
+    <input class="btn-find" type="text" placeholder="Tỉnh/Thành phố">
+    <input class="btn-find" type="text" placeholder="Quận/Huyện">
+    <button class="btn-find1" mat-flat-button>TÌM KIẾM</button>
+
+  </div>
+</div>
+<!--  <img class="img-home2" src="https://texaschickenvn.com/vnt_upload/weblink/ab.jpg">-->
+
+</div>
+<app-footer></app-footer>

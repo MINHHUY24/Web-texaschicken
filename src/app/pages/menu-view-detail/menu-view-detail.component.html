@@ -1,0 +1,87 @@
+<div id ="top">
+  <app-header></app-header>
+</div>
+
+<div class="icon-cart">
+
+  <mat-icon [routerLink]="['/cart-menu']" class="icon-shopping" matBadge="15">shopping_cart</mat-icon>
+
+</div>
+
+<div id ="center">
+  <div id ="center-left">
+    <div class="Menu_item">
+      <p class="menu-mon-an">CƠM GÀ</p>
+      <p class="menu-mon-an">MỲ Ý</p>
+      <p class="menu-mon-an">GÀ SỐT BƠ TỎI & THẢO MỘC </p>
+      <p class="menu-mon-an">COMBO GÀ RÁN (1 NGƯỜI) </p>
+      <p class="menu-mon-an">COMBO GÀ RÁN (2 NGƯỜI) </p>
+      <p class="menu-mon-an">COMBO GIA ĐÌNH & BẠN BÈ </p>
+      <p class="menu-mon-an">COMBO TIẾT KIỆM </p>
+      <p class="menu-mon-an">SET GÀ CÓ XƯƠNG</p>
+      <p class="menu-mon-an">CÁC MÓN GÀ RÁN</p>
+      <p class="menu-mon-an">BURGER</p>
+      <p class="menu-mon-an">BÁNH CUỘN</p>
+      <p class="menu-mon-an">CÁC MÓN ĂN KÈM</p>
+    </div>
+  </div>
+
+<div class="center-right">
+
+  <div class = "center-right-top">
+    <div class ="retangle">
+      <div class="img-menu">
+        <img [src]="currentMenu?.image">
+
+        <div class="img-small">
+          <img class="img-small" [src]="currentMenu?.image">
+        </div>
+      </div>
+    </div>
+
+    <div class="infor-right">
+      <p class="title-menu"> <b>{{currentMenu?.name }}</b></p>
+      <p class="title-price">Giá bán: <b class="price">{{ currentMenu?.price }}đ</b> <del class="old-price">{{currentMenu?.oldPrice}}đ</del> </p>
+      <p class="title-bio"> {{currentMenu?.bio}}</p>
+      <p class ="title"> <b> Quý khách vui lòng đặt hàng tại các ứng dụng sau:</b></p>
+      <div class="retangle-right">
+        <img class="img-deli" src="https://texaschickenvn.com/vnt_upload/product/06_2022/ud1.png">
+        <img class="img-deli" src="https://texaschickenvn.com/vnt_upload/product/06_2022/ud2.png">
+        <img class="img-deli" src="https://texaschickenvn.com/vnt_upload/product/06_2022/ud3.png">
+        <img class="img-deli" src="https://texaschickenvn.com/vnt_upload/product/06_2022/ud4.png">
+        <img class="img-deli" src="https://texaschickenvn.com/vnt_upload/product/06_2022/ud5.png">
+      </div>
+
+      <div class="share"> <p>Chia sẻ:</p>
+        <div class="icon-share"><img src="./facebook.png"> </div>
+        <div class="icon-share"><img src="./twitter.png"> </div>
+        <div class="icon-share"><img src="./pinterest.png"> </div>
+      </div>
+
+      <button (click)="cartService.addToCart(menu)" class="button-cart" mat-flat-button>Thêm vào giỏ hàng</button>
+    </div>
+  </div>
+
+  <div class="center-right-bot">
+    <b class="title-card">THỰC ĐƠN LIÊN QUAN</b>
+    <div id = "container-card-menu">
+    <div class="card-menu">
+      <div class="img-menu-bot">
+        <img [src]="currentMenu?.image" />
+      </div>
+      <div class="card-info">
+        <p class="title-menu-bot">{{ currentMenu?.name }}</p>
+        <p class="title-price-bot">Giá bán: <b class="price-bot">{{ currentMenu?.price }}đ</b> <del class="old-price-bot">{{currentMenu?.oldPrice}}đ</del> </p>
+        <div class="button-view-all">
+          <button [routerLink]="['/menu-view-detail', currentMenu?.id]" class="button-view"><b>XEM CHI TIẾT</b></button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+</div>
+
+<app-footer></app-footer>

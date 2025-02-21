@@ -1,0 +1,23 @@
+<div id = container-header >
+  <div class="top-left">
+    <img class="image-texas" src="https://texaschickenvn.com/vnt_upload/weblink/logo.png" alt="">
+  </div>
+  <div class="top-right">
+    <h4 [routerLink]="['/home']" class="home">TRANG CHỦ</h4>
+    <h4 [routerLink]="['/menu']" class="menu">THỰC ĐƠN</h4>
+    <h4 class="news">TIN TỨC</h4>
+    <h4 class="rtt">NHÀ HÀNG</h4>
+    <h4 class="infor-texas">VỀ TEXAS CHICKEN</h4>
+
+    <div class="logo-flag">
+      <img class="flag-vn" src="./flag-vn.svg" alt="">
+      <img class="flag-en" src="./flag-en.svg" alt="">
+      <mat-icon class="icon-search" aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon>
+      <mat-icon class="icon-shopping" [matBadge]="cartService.cart.length">shopping_cart</mat-icon>
+
+
+    </div>
+
+  </div>
+
+</div>
