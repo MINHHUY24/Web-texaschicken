@@ -14,7 +14,7 @@ export const routes: Routes = [
 
   {
     path: 'menu-page2',
-    component: MenuPage2Component
+    component: MenuPage2Component,
   },
 
   {
